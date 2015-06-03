@@ -1,0 +1,139 @@
+.iv-boundary {
+    margin: 0px;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.iv-boundary .show-metadata {
+    font-family: Tahoma;
+    font-size: 5em;
+    font-weight: 600;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: 1;
+}
+
+.iv-boundary .soft_layer {
+    background-color: #ffff00;
+}
+
+.iv-boundary .soft_layer .brick {
+    display: inline-block;
+}
+
+.iv-boundary .soft_layer .brick img {
+    width: 100%;
+    height: 100%;
+}
+
+.iv-boundary .soft_layer .brick:hover {
+    background-color: red;
+}
+
+.iv-boundary .anchor_popup {
+    width: 200px;
+    position: absolute;
+    visibility: hidden;
+    background-color: #2b542c;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.iv-boundary .anchor_popup:after, .iv-boundary .anchor_popup::after {
+    position: absolute;
+    top: 99.9%;
+    left: 95.5%;
+    margin-left: -50%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: solid 8px rgba(0, 0, 0, 0.8);
+    border-left: solid 9px transparent;
+    border-right: solid 9px transparent;
+}
+
+.iv-boundary .anchor_popup h5 {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: normal;
+    margin: 0;
+    padding: 0 0 10px 7px;
+    border-bottom: thin solid #666;
+    text-align: left;
+}
+
+.iv-boundary .anchor_popup .hyperlink {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: normal;
+    padding-bottom: 7px;
+    border-bottom: thin solid #666;
+    margin-bottom: 12px;
+}
+
+.iv-boundary .anchor_popup .anchor_box_link a {
+    border-bottom: thin solid #666;
+    color: #fff;
+    display: block;
+    line-height: normal;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 7px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.iv-boundary .anchor_popup .anchor_box_link a:hover {
+    background: #1680c7;
+}
+
+.iv-boundary .anchor_popup .anchor_box_image {
+    height: 129px;
+}
+#wrapper {
+}
+#controls {
+    padding: 10px;
+}
+#controls span {
+    cursor: pointer;
+}
+
+.kinetic-moving-up {
+    border-top-color: green !important;
+}
+.kinetic-moving-down {
+    border-bottom-color: green !important;
+}
+.kinetic-moving-left {
+    border-left-color: green !important;
+}
+.kinetic-moving-right {
+    border-right-color: green !important;
+}
+
+.kinetic-decelerating-up {
+    border-top-color: red !important;
+}
+.kinetic-decelerating-down {
+    border-bottom-color: red !important;
+}
+.kinetic-decelerating-left {
+    border-left-color: red !important;
+}
+.kinetic-decelerating-right {
+    border-right-color: red !important;
+}
+#inner { }
+#inner img {
+}
+#left, #right { cursor: pointer; }
