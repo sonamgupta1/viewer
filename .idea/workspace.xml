@@ -26,25 +26,16 @@
       <file leaf-file-name="viewer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="24" selection-start="29709" selection-end="29709" vertical-scroll-proportion="-20.125" vertical-offset="372" max-vertical-offset="1005">
+            <state line="26" column="45" selection-start="836" selection-end="836" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.move.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/jquery.move.js">
+      <file leaf-file-name="viewer.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/viewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="35" selection-start="754" selection-end="754" vertical-scroll-proportion="0.40298507" vertical-offset="0" max-vertical-offset="670">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.kinetic.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/jquery.kinetic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="10" selection-start="1300" selection-end="1304" vertical-scroll-proportion="-32.22222" vertical-offset="0" max-vertical-offset="7530">
+            <state line="226" column="19" selection-start="10108" selection-end="10108" vertical-scroll-proportion="0.1780822" vertical-offset="3273" max-vertical-offset="5310">
               <folding />
             </state>
           </provider>
@@ -53,7 +44,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="1" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0" vertical-offset="1400" max-vertical-offset="2160">
+            <state line="110" column="0" selection-start="2096" selection-end="2096" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1740">
               <folding />
             </state>
           </provider>
@@ -69,18 +60,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/javascript/jquery.kinetic.js" />
+        <option value="$PROJECT_DIR$/javascript/raf.js" />
+        <option value="$PROJECT_DIR$/javascript/scroll.js" />
         <option value="$PROJECT_DIR$/javascript/jquery.move.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/viewer.html" />
+        <option value="$PROJECT_DIR$/javascript/viewer.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="y" value="24" />
-    <option name="width" value="1313" />
-    <option name="height" value="744" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -108,7 +103,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,6 +151,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,27 +187,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="24" width="1313" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -234,6 +229,76 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/viewer.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="0" selection-start="2096" selection-end="2096" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="29640" selection-end="29640" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="0" selection-start="2096" selection-end="2096" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="17" selection-start="29606" selection-end="29607" vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="34" selection-start="2703" selection-end="2703" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="2160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="29607" selection-end="29607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.0" vertical-offset="1515" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="29607" selection-end="29607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.0" vertical-offset="1515" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="86" selection-start="29312" selection-end="29312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
           <folding />
         </state>
@@ -241,28 +306,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="1" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0" vertical-offset="1400" max-vertical-offset="2160">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/jquery.kinetic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="10" selection-start="1300" selection-end="1304" vertical-scroll-proportion="-32.22222" vertical-offset="0" max-vertical-offset="7530">
+        <state line="110" column="0" selection-start="2096" selection-end="2096" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1740">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="24" selection-start="29709" selection-end="29709" vertical-scroll-proportion="-20.125" vertical-offset="372" max-vertical-offset="1005">
+        <state line="26" column="45" selection-start="836" selection-end="836" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/jquery.move.js">
+    <entry file="file://$PROJECT_DIR$/javascript/viewer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="754" selection-end="754" vertical-scroll-proportion="0.40298507" vertical-offset="0" max-vertical-offset="670">
+        <state line="226" column="19" selection-start="10108" selection-end="10108" vertical-scroll-proportion="0.1780822" vertical-offset="3273" max-vertical-offset="5310">
           <folding />
         </state>
       </provider>

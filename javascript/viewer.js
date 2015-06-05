@@ -29,7 +29,7 @@
             actual_view: null
         };
 
-        var settings = $.extend({}, defaults, options);
+        var  settings = $.extend({}, defaults, options);
 
         var makeHardBoundary = function () {
             ele = $("<div class='hard_layer layer_h_1' />");
@@ -43,7 +43,10 @@
             ele = $("<div class='soft_layer layer_s_1' />");
             ele.width('100%');
             ele.height('100%');
-            ele.html("<div class='anchor_popup'><h5 class='anchor_box_title'>Jump to this sheet</h5><div class='anchor_box_link'></div><div class='anchor_box_image'><img src='#'/></div></div>")
+            ele.html("<div class='anchor_popup'><h5 class='anchor_box_title'>Jump to this sheet</h5>" +
+                "<div class='anchor_box_link'></div>" +
+                "<div class='anchor_box_image'>" +
+                "<img src='#'/></div></div>")
             settings.hard_layer.append(ele);
             settings.soft_layer = ele
         }
@@ -143,6 +146,7 @@
         }
 
         var zoomin = function () {
+
             if (settings.zoom_action_is_on || settings.zoom_current_percentage >= 100) {
                 return false;
             }
@@ -151,9 +155,17 @@
             if (settings.zoom_current_percentage > 100) {
                 settings.zoom_current_percentage = 100
             }
-            console.log(settings.focal_point_zoom_ratio)
-            var _left = settings.soft_layer.position().left + (settings.soft_layer.width() * settings.focal_point_zoom_ratio.x) - ( settings.max_dimension.width * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.x);
-            var _top = settings.soft_layer.position().top + (settings.soft_layer.height() * settings.focal_point_zoom_ratio.y) - ( settings.max_dimension.height * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.y);
+            console.log('-----------------------');
+            console.log(settings.soft_layer.position());
+
+            _current_left = parseInt(settings.soft_layer.css('left'));
+            _current_top = parseInt(settings.soft_layer.css('top'));
+
+            var _left = _current_left + (settings.soft_layer.width() * settings.focal_point_zoom_ratio.x) - ( settings.max_dimension.width * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.x);
+            var _top = _current_top + (settings.soft_layer.height() * settings.focal_point_zoom_ratio.y) - ( settings.max_dimension.height * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.y);
+
+            console.log(_left);
+            console.log(_top);
 
             showLayer();
             settings.soft_layer.animate({
@@ -167,6 +179,8 @@
                 }
                 settings.zoom_action_is_on = false;
             });
+            console.log(settings.soft_layer.position());
+            console.log('-----------------------');
         }
 
         var zoomout = function () {
@@ -180,8 +194,15 @@
             if (settings.zoom_current_percentage < settings.min_zoom_percentage) {
                 settings.zoom_current_percentage = settings.min_zoom_percentage
             }
-            var _left = settings.soft_layer.position().left + (settings.soft_layer.width() * settings.focal_point_zoom_ratio.x) - ( settings.max_dimension.width * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.x);
-            var _top = settings.soft_layer.position().top + (settings.soft_layer.height() * settings.focal_point_zoom_ratio.y) - ( settings.max_dimension.height * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.y);
+
+            _current_left = parseInt(settings.soft_layer.css('left'));
+            _current_top = parseInt(settings.soft_layer.css('top'));
+
+
+            var _left = _current_left + (settings.soft_layer.width() * settings.focal_point_zoom_ratio.x) - ( settings.max_dimension.width * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.x);
+            var _top = _current_top + (settings.soft_layer.height() * settings.focal_point_zoom_ratio.y) - ( settings.max_dimension.height * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.y);
+
+
 
             showLayer();
 
@@ -227,7 +248,6 @@
                     'x': (delta_x / $(this).width()),
                     'y': (delta_y / $(this).height())
                 };
-                //console.log(focal_point_zoom_ratio);
             });
 
             insert_anchors();

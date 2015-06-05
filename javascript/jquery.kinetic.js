@@ -1,10 +1,19 @@
+/**
+ jQuery.kinetic v2.0.6
+ Dave Taylor http://davetayls.me
+
+ @license The MIT License (MIT)
+ @preserve Copyright (c) 2012 Dave Taylor http://davetayls.me
+ */
 (function ($){
   'use strict';
 
   var ACTIVE_CLASS = 'kinetic-active';
- 
-   // Provides requestAnimationFrame in a cross browser way.
-  
+
+  /**
+   * Provides requestAnimationFrame in a cross browser way.
+   * http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+   */
   if (!window.requestAnimationFrame){
 
     window.requestAnimationFrame = ( function (){
@@ -32,6 +41,7 @@
 
 
   // KINETIC CLASS DEFINITION
+  // ======================
 
   var Kinetic = function (element, settings) {
     this.settings = settings;
@@ -470,10 +480,11 @@
 
 
   // EXPOSE KINETIC CONSTRUCTOR
- 
+  // ==========================
   $.Kinetic = Kinetic;
 
   // KINETIC PLUGIN DEFINITION
+  // =======================
 
   $.fn.kinetic = function (option, callOptions) {
     return this.each(function () {
