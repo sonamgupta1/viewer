@@ -26,10 +26,11 @@
             zoom_out_link: null,
             full_screen_link: null,
             navigation_section: null,
-            actual_view: null
+            actual_view: null,
+            thumbnail_url: null
         };
 
-        var  settings = $.extend({}, defaults, options);
+        var settings = $.extend({}, defaults, options);
 
         var makeHardBoundary = function () {
             ele = $("<div class='hard_layer layer_h_1' />");
@@ -43,10 +44,7 @@
             ele = $("<div class='soft_layer layer_s_1' />");
             ele.width('100%');
             ele.height('100%');
-            ele.html("<div class='anchor_popup'><h5 class='anchor_box_title'>Jump to this sheet</h5>" +
-                "<div class='anchor_box_link'></div>" +
-                "<div class='anchor_box_image'>" +
-                "<img src='#'/></div></div>")
+            ele.html("<div class='anchor_popup'><h5 class='anchor_box_title'>Jump to this sheet</h5><div class='anchor_box_link'></div><div class='anchor_box_image'><img src='#'/></div></div>")
             settings.hard_layer.append(ele);
             settings.soft_layer = ele
         }
@@ -92,8 +90,8 @@
         var insert_anchors = function () {
             $.each(settings.anchors, function (index) {
                 var _style = "position:absolute;background-color:red;";
-                _style += "left:" + relative_percentage_x_axis(this.left) + "%;"
-                _style += "bottom:" + relative_percentage_y_axis(this.bottom) + "%;"
+                _style += "left:" + relative_percentage_x_axis(this.llx) + "%;"
+                _style += "top:" + relative_percentage_y_axis(this.lly) + "%;"
                 _style += "height:" + relative_percentage_y_axis(this.height) + "%;"
                 _style += "width:" + relative_percentage_x_axis(this.width) + "%;"
                 if (this.target == '_blank') {
@@ -108,9 +106,10 @@
 
         var position_anchor_popup = function(element) {
             _style = element.attr('style');
+            //_left_position = parseFloat(_style.match(/.*left:(\d*.\d*)/)[1]) + parseFloat(_style.match(/.*width:(\d*.\d*)/)[1])/2
             _left_position = parseFloat(_style.match(/.*left:(\d*.\d*)/)[1]) - ((((settings.soft_layer.find('.anchor_popup').width() - element.width()) / 2) * parseFloat(_style.match(/.*width:(\d*.\d*)/)[1])) / element.innerWidth())
-            _bottom_position = parseFloat(_style.match(/.*bottom:(\d*.\d*)/)[1]) + parseFloat(_style.match(/.*height:(\d*.\d*)/)[1]) + (10 * parseFloat(_style.match(/.*height:(\d*.\d*)/)[1]) / element.height())
-            settings.soft_layer.find('div.anchor_popup').attr('style', 'left:' + _left_position + '%;bottom:' + _bottom_position + '%;')
+            _top_position = parseFloat(_style.match(/.*top:(\d*.\d*)/)[1]) - parseFloat(settings.soft_layer.find('.anchor_popup').height() + 10)
+            settings.soft_layer.find('div.anchor_popup').attr('style', 'left:' + _left_position + '%;')//top:' + _top_position + '%;')
         }
 
         var reposition_anchor_popup = function() {
@@ -146,7 +145,6 @@
         }
 
         var zoomin = function () {
-
             if (settings.zoom_action_is_on || settings.zoom_current_percentage >= 100) {
                 return false;
             }
@@ -155,17 +153,12 @@
             if (settings.zoom_current_percentage > 100) {
                 settings.zoom_current_percentage = 100
             }
-            console.log('-----------------------');
-            console.log(settings.soft_layer.position());
-
+            console.log(settings.focal_point_zoom_ratio)
             _current_left = parseInt(settings.soft_layer.css('left'));
             _current_top = parseInt(settings.soft_layer.css('top'));
 
             var _left = _current_left + (settings.soft_layer.width() * settings.focal_point_zoom_ratio.x) - ( settings.max_dimension.width * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.x);
             var _top = _current_top + (settings.soft_layer.height() * settings.focal_point_zoom_ratio.y) - ( settings.max_dimension.height * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.y);
-
-            console.log(_left);
-            console.log(_top);
 
             showLayer();
             settings.soft_layer.animate({
@@ -179,8 +172,6 @@
                 }
                 settings.zoom_action_is_on = false;
             });
-            console.log(settings.soft_layer.position());
-            console.log('-----------------------');
         }
 
         var zoomout = function () {
@@ -198,10 +189,8 @@
             _current_left = parseInt(settings.soft_layer.css('left'));
             _current_top = parseInt(settings.soft_layer.css('top'));
 
-
             var _left = _current_left + (settings.soft_layer.width() * settings.focal_point_zoom_ratio.x) - ( settings.max_dimension.width * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.x);
             var _top = _current_top + (settings.soft_layer.height() * settings.focal_point_zoom_ratio.y) - ( settings.max_dimension.height * (settings.zoom_current_percentage / 100) * settings.focal_point_zoom_ratio.y);
-
 
 
             showLayer();
@@ -236,7 +225,7 @@
         return this.each(function () {
             settings.container = $(this)
             settings.focal_point_zoom_ratio = {'x': 50 / 100, 'y': 50 / 100},
-            makeHardBoundary();
+                makeHardBoundary();
             makeSoftBoundary();
             $.each(settings.layers, function (k, v) {
                 createBricks(k, v);
@@ -248,6 +237,7 @@
                     'x': (delta_x / $(this).width()),
                     'y': (delta_y / $(this).height())
                 };
+                //console.log(focal_point_zoom_ratio);
             });
 
             insert_anchors();
